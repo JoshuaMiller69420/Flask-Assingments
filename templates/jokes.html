@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Here's your joke!</h1>
+    <div class="form-container">
+      <form action="/jokes" method="POST" class="joke-form">
+        <div class="form-group">
+          <label for="mood" class="form-label">Select your mood</label>
+          <select name="mood" id="mood" class="form-select" required>
+            {% for mood in moods %}
+            <option value="{{mood}}">{{mood}}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <button type="submit" class="submit-btn" id="submit1">
+          Give me a joke
+        </button>
+      </form>
+    </div>
+
+    {% if mood_message%}
+    <p>{{mood_message}}</p>
+    {% endif %} {% if joke%}
+    <p>{{joke}}</p>
+    {% endif %}
+    <p><a href="/">Go home</a></p>
+  </body>
+</html>
