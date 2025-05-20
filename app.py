@@ -49,6 +49,19 @@ def jokes():
  
     return render_template("jokes.html", error=error, moods=moods, joke=joke, mood_message=mood_message)
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    joke=None
+    term=None
+    error=None
+    jokes=""
+    if request.method == "POST":
+        term = request.form.get("search")
+        api_url = f"https://icanhazdadjoke.com/search?term={term}"
+        headers = {"Accept": "application/json"}
+        if response.status_code == 200:
+
+
 if __name__ == "__main__":
     # debug = True enables automatic reload on changes and better error messages
     app.run(debug=True)
