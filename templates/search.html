@@ -5,5 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Search for your Joke!</h1>
+    <div>
+      <form action="./search" method="POST">
+        <input type="text" name="search" />
+        <button>Submit</button>
+      </form>
+    </div>
+
+    {% if error%}
+    <p>{{error}}</p>
+    {%endif%} {% for joke in jokes%}
+    <p>{{ joke.joke }}</p>
+    {% endfor %}
+    <p><a href="/">Go home</a></p>
+  </body>
 </html>

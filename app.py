@@ -59,7 +59,13 @@ def search():
         term = request.form.get("search")
         api_url = f"https://icanhazdadjoke.com/search?term={term}"
         headers = {"Accept": "application/json"}
+        response = requests.get(api_url, headers=headers)
         if response.status_code == 200:
+            print(response.json())
+            jokes = response.json().get("results")
+        else:
+            error="Couldn't get your joke, either try again with a different term ir try again later"
+    return render_template("search.html", error=error, jokes=jokes, term=term, joke=joke)
 
 
 if __name__ == "__main__":
