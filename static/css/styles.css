@@ -1,0 +1,96 @@
+:root {
+    --color-primary: #E3DFFF;
+    --color-primary-accent: #D3C0CD;
+    --color-secondary: #B19994;
+    --color-secondary-accent: #937666;
+    --color-accent: #3D3A4B;
+}
+
+body{
+    background-image: url(https://img.itch.zone/aW1nLzU3MTcxNzIuanBlZw==/original/8yOxYy.jpeg);
+
+}
+
+header{
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    position: sticky;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    color: var(--color-accent);
+}
+
+
+/* Task Bar */
+.toggle-button {
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: var(--color-secondary-accent);
+    color: white;
+    padding: .5rem;
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.navbar ul li {
+    margin: 0.5rem 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+.nav_item {
+    display: grid;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 2.5px;
+    border-color: white;
+    font-size: 1.5rem;
+}
+.nav_item > a:hover {
+    color: green;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--color-accent);
+    border-radius: 15px;
+    color: white;
+    width: 30%;
+    min-width: 150px;
+    height: 600px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+

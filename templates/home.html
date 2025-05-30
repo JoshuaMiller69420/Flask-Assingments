@@ -5,17 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="{{url_for('static', filename= '/css/styles.css')}}"
+      href="{{url_for('static',filename='css/styles.css')}}"
     />
+    <script src="/static/js/js.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <header>Home Page</header>
-    <div class="taskbar"></div>
+    <div class="id navbars">
+      <button id="toggleBtn" class="toggle-button">☰ Menu</button>
+      <nav id="navbar" class="navbar hidden">
+        <ul>
+          <li class="nav_item"><a href="/">Home</a></li>
+          <li class="nav_item"><a href="/jokes">Jokes</a></li>
+          <li class="nav_item"><a href="/search">Search</a></li>
+        </ul>
+      </nav>
+    </div>
     <h1>Get a Random Dad Joke!</h1>
-    <p>
-      <a href="/jokes"><button>Get a Dad Joke</button></a>
-      <a href="/search"><button>Joke Search</button></a>
-    </p>
+    <div class="cards">
+      <div class="card">
+        <h3>Poor People</h3>
+        <p>
+          This course is for the poor people. It's not the best but you can stil
+          be a baller.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Middle Class</h3>
+        <p>
+          This course is for the middle class. You'll be able to become a baller
+          very quickly.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Rich Baller</h3>
+        <p>
+          This course is for the rich baller. I don't know why your spending
+          your money on this if you're already a baller/
+        </p>
+      </div>
+    </div>
   </body>
 </html>

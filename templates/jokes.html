@@ -3,10 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/styles.css')}}"
+    />
+    <script src="/static/js/js.js" defer></script>
     <title>Document</title>
   </head>
   <body>
+    <div class="id navbars">
+      <button id="toggleBtn" class="toggle-button">☰ Menu</button>
+      <nav id="navbar" class="navbar hidden">
+        <ul>
+          <li class="nav_item"><a href="/">Home</a></li>
+          <li class="nav_item"><a href="/jokes">Jokes</a></li>
+          <li class="nav_item"><a href="/search">Search</a></li>
+        </ul>
+      </nav>
+    </div>
     <h1>Here's your joke!</h1>
     <div class="form-container">
       <form action="/jokes" method="POST" class="joke-form">
@@ -29,6 +43,5 @@
     {% endif %} {% if joke%}
     <p>{{joke}}</p>
     {% endif %}
-    <p><a href="/">Go home</a></p>
   </body>
 </html>
