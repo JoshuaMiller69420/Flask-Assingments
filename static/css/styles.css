@@ -8,7 +8,6 @@
 
 body{
     background-image: url(https://img.itch.zone/aW1nLzU3MTcxNzIuanBlZw==/original/8yOxYy.jpeg);
-
 }
 
 header{
@@ -19,6 +18,10 @@ header{
     font-weight: bold;
     position: sticky;
     text-align: center;
+}
+
+#underline{
+    text-decoration: underline;
 }
 
 h1{
@@ -65,11 +68,19 @@ h1{
     font-size: 1.5rem;
 }
 .nav_item > a:hover {
-    color: green;
+    color: var(--color-accent);
+    border-color: var(--color-accent);
 }
 
 .hidden {
     display: none;
+}
+
+
+/* Home Page */
+.img-sizing{
+    height: 400px;
+    width: 400px;
 }
 
 
@@ -78,7 +89,7 @@ h1{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 10px;
 }
 
 .card {
@@ -87,10 +98,27 @@ h1{
     color: white;
     width: 30%;
     min-width: 150px;
-    height: 600px;
+    height: 650px;
     display: grid;
     justify-content: center;
+    text-align: center;
     align-items: center;
     font-size: 24px;
 }
 
+
+/* Jokes Page */
+
+
+
+/* Search Page */
+.inpt{
+    background-color: var(--color-primary);
+    font-size: 20px;
+}
+
+.btn{
+    font-size: 20px;
+    border-color: var(--color-accent);
+    border-radius: 5px;
+}
