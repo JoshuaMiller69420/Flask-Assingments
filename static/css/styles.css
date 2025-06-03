@@ -113,7 +113,10 @@ h1{
 
 
 /* Jokes Page */
-
+.center{
+    font-size: 20px;
+    text-align: center;
+}
 
 
 /* Search Page */
