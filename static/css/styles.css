@@ -132,8 +132,12 @@ h1{
 }
 
 .middle{
-    background-color: var(--color-accent);
     text-align: center;
-    color: var(--color-primary);
+    justify-content: space-between;
+}
+
+.background{
+    background-color: var(--color-accent);
+    color: var(--color-primary-accent);
     font-size: 25px;
 }
